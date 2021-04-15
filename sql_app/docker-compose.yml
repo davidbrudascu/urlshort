@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+
+  db:
+    container_name: urldb
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: casinova
+      POSTGRES_PASSWORD: bowcow
+      POSTGRES_DB: urldb
+    ports:
+      - "5432:5432"
+
+
+
+volumes:
+  pg_data:
+
